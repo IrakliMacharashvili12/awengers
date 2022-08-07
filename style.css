@@ -1,0 +1,79 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    font-size: sans-serif;
+}
+.split{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    background:black;
+
+}
+.split .screen{
+    position: relative;
+    flex-grow: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    overflow: hidden;
+    transition: 1s;
+
+
+}
+.split:hover .screen{
+    opacity: 0.1;
+}
+.split .screen:hover{
+    flex-grow: 5;
+    opacity: 1;
+}
+
+.split .screen .content{
+    position: absolute;
+    width: 400px;
+    height: auto;
+    background-color: rgb(0, 0, 0, 0.8);
+    padding: 40px;
+    box-sizing: border-box;
+    transform: translateX(100%);
+    transition: .5s;
+    text-align: justify;
+}
+.split .screen:hover .content{
+    transform: translateX(0);
+    transition-delay: 1s;
+    
+}
+.split .screen .content h2{
+    margin: 0%;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 30px;
+    color:#ed363a ;
+}
+.split .screen .content p{
+    margin: 0%;
+    padding: 0%;
+    color: white;
+}
+.split .screen:nth-child(1){
+    background: url(./photo/1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+   background-size: 100% 100%;
+}
+
+.split .screen:nth-child(2){
+    background: url(./photo/10.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+   background-size: 100% 100%;
+}
+
+.split .screen:nth-child(3){
+    background: url(./photo/5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+   background-size: 100% 100%;
+}
